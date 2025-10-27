@@ -1,0 +1,153 @@
+:root {
+  --bg: #fdfcff;
+  --primary: #8474A1;
+  --secondary: #6FC5CC;
+  --accent: #075B5D;
+  --highlight: #CCABDA;
+  --muted: #5a5a5a;
+  --card: #eeeeee;
+  --shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  --maxw: 960px;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, var(--highlight) 0%, var(--bg) 100%);
+  color: #1b1b1b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--maxw);
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 40px;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.left {
+  flex: 1 1 420px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.logo img {
+  max-width: 260px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: none; /* 🔹 Quitamos la sombra */
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+
+.logo img:hover {
+  transform: scale(1.03);
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  line-height: 1.1;
+  color: var(--accent);
+}
+
+p.lead {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.info {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  background: #f3f4f8;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: var(--accent);
+  border: 1px solid #e2e2e2;
+}
+
+.right {
+  width: 260px;
+  min-width: 220px;
+  text-align: center;
+}
+
+.count {
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.small {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--secondary);
+  color: var(--accent);
+}
+
+.foot {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 840px) {
+  .wrap {
+    flex-direction: column;
+    padding: 28px;
+  }
+
+  .logo img {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .right {
+    width: 100%;
+  }
+}
